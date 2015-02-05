@@ -1,0 +1,36 @@
+<services>
+	<service>
+		<name>getOrders</name>
+		<params>
+			<param name="login" type="text" required="true" sample="Service-PRO" />
+			<param name="pwd" type="text" required="true" sample="codeur@71" />
+		</params>
+	</service>
+	<service>
+		<name>getShippingInformation</name>
+		<params>
+			<param name="login" type="text" required="true" sample="Service-PRO" />
+			<param name="pwd" type="text" required="true" sample="codeur@71" />
+			<param name="purchaseid" type="text" required="true" sample="" />
+		</params>
+	</service>
+	<service>
+		<name>getOrderContent</name>
+		<params>
+			<param name="login" type="text" required="true" sample="Service-PRO" />
+			<param name="pwd" type="text" required="true" sample="codeur@71" />
+			<param name="purchaseid" type="text" required="true" sample="" />
+		</params>
+	</service>
+	<service>
+		<name>doShippedOrder</name>
+		<params>
+			<param name="login" type="text" required="true" sample="Service-PRO" />
+			<param name="pwd" type="text" required="true" sample="codeur@71" />
+			<param name="orderid" type="text" required="true" sample="" />
+			<param name="tracknumber" type="text" required="true" sample="" />
+			<param name="trackurl" type="text" required="true" sample="" />
+		</params>
+		<soap action="http://www.cdiscount.com/IMarketplaceAPIService/ValidateOrderList" />
+	</service>
+</services>

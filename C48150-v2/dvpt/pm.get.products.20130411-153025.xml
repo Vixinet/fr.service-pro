@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+
+
+
+
+<errorresponse xmlns="http://pmcdn.priceminister.com/res/schema/error" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://pmcdn.priceminister.com/res/schema/error http://pmcdn.priceminister.com/res/schema/error/error.xsd">
+<error>
+<type>Sender</type>
+<code>ParameterError</code>
+<message>Problem with parameters.</message>
+<details>
+<detail><![CDATA[The version 2012-10-23?action=export is not supported]]></detail>
+</details>
+</error>
+</errorresponse>

@@ -1,0 +1,49 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+	<s:Body>
+		<GetOrderList xmlns="http://www.cdiscount.com">
+			<headerMessage xmlns:a="http://schemas.datacontract.org/2004/07/Cdiscount.Framework.Core.Communication.Messages" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+				<a:Context>
+					<a:CatalogID>1</a:CatalogID>
+					<a:CustomerPoolID>1</a:CustomerPoolID>
+					<a:SiteID>100</a:SiteID>
+				</a:Context>
+				<a:Localization>
+					<a:Country>Fr</a:Country>
+					<a:Currency>Eur</a:Currency>
+					<a:DecimalPosition>2</a:DecimalPosition>
+					<a:Language>Fr</a:Language>
+				</a:Localization>
+				<a:Security>
+					<a:DomainRightsList i:nil="true" />
+					<a:IssuerID i:nil="true" />
+					<a:SessionID i:nil="true" />
+					<a:SubjectLocality i:nil="true" />
+					<a:TokenId>${#Project#token}</a:TokenId>
+					<a:UserName i:nil="true" />
+				</a:Security>
+				<a:Version>1.0</a:Version>
+			</headerMessage>
+			<orderFilter xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+				<BeginCreationDate>${#dateBeg}T00:00:00.00</BeginCreationDate>
+				<EndCreationDate>${#dateEnd}T23:59:59.99</EndCreationDate>
+				<BeginModificationDate>${#dateBeg}-02T01:00:00.00</BeginModificationDate>
+				<EndModificationDate>${#dateEnd}T02:00:00.00</EndModificationDate>
+				<FetchOrderLines>true</FetchOrderLines>
+				<States>
+					<!-- <OrderStateEnum>CancelledByCustomer</OrderStateEnum> -->
+					<!-- <OrderStateEnum>PaymentInProgress</OrderStateEnum> -->
+					<!-- <OrderStateEnum>AutomaticCancellation</OrderStateEnum> -->
+					<!-- <OrderStateEnum>PaymentRefused</OrderStateEnum> -->
+					<!-- <OrderStateEnum>ShipmentRefusedBySeller</OrderStateEnum> -->
+					<!-- <OrderStateEnum>RefusedBySeller</OrderStateEnum> -->
+					<!-- <OrderStateEnum>RefusedNoShipment</OrderStateEnum> -->
+					<!-- <OrderStateEnum>PaymentInProgress</OrderStateEnum> -->
+					<!-- <OrderStateEnum>WaitingForSellerAcceptation</OrderStateEnum> -->
+					<!-- <OrderStateEnum>AcceptedBySeller</OrderStateEnum> -->
+					<OrderStateEnum>WaitingForShipmentAcceptation</OrderStateEnum>
+					<OrderStateEnum>Shipped</OrderStateEnum>
+				</States>
+			</orderFilter>
+		</GetOrderList>
+	</s:Body>
+</s:Envelope>
